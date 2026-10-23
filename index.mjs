@@ -3,35 +3,39 @@ import { engine } from "./lib/engine.mjs"
 
 engine.init("./storage");
 
-engine.createPost("belajar js");
-engine.selectActivePost("belajar js");
-engine.addComment({
-    name: "user 1",
-    comment: "Materi nya sangat mudah dipahami",
-    createAt: (new Date()).toLocaleDateString()
-});
-engine.addComment({
-    name: "user 2",
-    comment: "Mantap awokawoak",
-    createAt: (new Date()).toLocaleDateString()
-});
-
-
-
-
-engine.createPost("belajar css");
-engine.selectActivePost("belajar css");
-engine.addComment({
-    name: "user 1",
-    comment: "Oh gitu",
-    createAt: (new Date()).toLocaleDateString()
-});
-engine.addComment({
-    name: "user 4",
-    comment: "buat center div gimana ya?",
-    createAt: (new Date()).toLocaleDateString()
-});
-engine.printComments();
-
+engine.loadComments("belajar js");
 engine.selectActivePost("belajar js");
 engine.printComments();
+
+engine.removeComment("01a167bc-473f-7352-99e3-0f6e8173e6c4");
+engine.printComments();
+
+// engine.createPost("belajar js");
+// engine.selectActivePost("belajar js");
+// engine.addComment({
+//     name: "user 1",
+//     comment: "Materi nya sangat mudah dipahami",
+//     createAt: (new Date()).toLocaleDateString()
+// });
+// engine.addComment({
+//     name: "user 2",
+//     comment: "Mantap awokawoak",
+//     createAt: (new Date()).toLocaleDateString()
+// });
+
+// engine.createPost("belajar css");
+// engine.selectActivePost("belajar css");
+// engine.addComment({
+//     name: "user 1",
+//     comment: "Oh gitu",
+//     createAt: (new Date()).toLocaleDateString()
+// });
+// engine.addComment({
+//     name: "user 4",
+//     comment: "buat center div gimana ya?",
+//     createAt: (new Date()).toLocaleDateString()
+// });
+// engine.printComments();
+
+// engine.selectActivePost("belajar js");
+// engine.printComments();
